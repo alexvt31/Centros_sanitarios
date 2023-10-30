@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import folium
 from coordenadas import Coordenadas
 import webbrowser
@@ -19,6 +18,8 @@ def crea_mapa(coordenadas, zoom=9):
     mapa = folium.Map(location=[coordenadas.latitud, coordenadas.longitud], 
                       zoom_start=zoom)
     return mapa
+
+
 
 def agrega_marcador (mapa, coordenadas, etiqueta, color):
     '''
@@ -54,3 +55,6 @@ def guarda_mapa(mapa, ruta_fichero):
     mapa.save(ruta_fichero)
     # Abre el fichero creado en un navegador web
     webbrowser.open("file://" + os.path.realpath(ruta_fichero))
+
+
+
